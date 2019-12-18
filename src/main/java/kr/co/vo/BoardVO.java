@@ -2,7 +2,7 @@ package kr.co.vo;
 
 public class BoardVO {
 	private String email;
-	private String password;
+	private String pwd;
 	private String content;
 	
 	public String getEmail() {
@@ -11,11 +11,11 @@ public class BoardVO {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getPassword() {
-		return password;
+	public String getPwd() {
+		return pwd;
 	}
-	public void setPassword(String password) {
-		this.password = password;
+	public void setPwd(String pwd) {
+		this.pwd = pwd;
 	}
 	public String getContent() {
 		return content;

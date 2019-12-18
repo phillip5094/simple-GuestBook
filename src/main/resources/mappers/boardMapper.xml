@@ -5,7 +5,7 @@
 <mapper namespace="boardMapper">
 	<!-- 방명록 추가 -->
 	<insert id="insert">
-		INSERT INTO MP_BOARD(EMAIL, PWD, CONTENT, CRE_DATE, MOD_DATE)
-		VALUES(#{email}, #{password}, #{content}, now(), now())
+		insert into mp_board(email, pwd, content, cre_date, mod_date)
+		VALUES(#{email}, #{pwd}, #{content}, now(), now())
 	</insert>
 </mapper>

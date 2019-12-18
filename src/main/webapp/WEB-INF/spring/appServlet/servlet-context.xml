@@ -21,8 +21,8 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-	<context:component-scan base-package="kr.co.study" />
-	
+	<!-- controller가 client의 요청을 받을 수 있도록 -->
+	<context:component-scan base-package="kr.co.controller" />
 	
 	
 </beans:beans>
