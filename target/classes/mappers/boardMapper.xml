@@ -8,4 +8,9 @@
 		insert into mp_board(email, pwd, content, cre_date, mod_date)
 		VALUES(#{email}, #{pwd}, #{content}, now(), now())
 	</insert>
+	
+	<!-- 방명록 가져오기 -->
+	<select id="list" resultType="kr.co.vo.BoardVO">
+		select bno, email, content from mp_board order by mode
+	</select>
 </mapper>
