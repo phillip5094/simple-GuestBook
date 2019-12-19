@@ -7,6 +7,16 @@
 <head>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".cancel_btn").on("click", function(){
+			event.preventDefault();
+			location.href = "/board/list";
+			
+		})
+		
+	})
+</script>
 <title>상세 방명록 정보</title>
 </head>
 <body>
@@ -19,7 +29,7 @@
 	수정시간 : <fmt:formatDate value="${read.mod_date}" pattern="yyyy-MM-dd HH:mm:ss"/><br>
 	비밀번호 : <input type="password" name="pwd"/><br>
 	<input type="submit" value="수정"/>
-	<button onclick = "location.href='/board/list'" name="cancle">취소</button>
+	<button class="cancel_btn" name="cancle">취소</button>
 	</form>
 </body>
 </html>
