@@ -11,6 +11,6 @@
 	
 	<!-- 방명록 가져오기 -->
 	<select id="list" resultType="kr.co.vo.BoardVO">
-		select bno, email, content from mp_board order by mode
+		select bno, email, content from mp_board order by mod_date
 	</select>
 </mapper>
