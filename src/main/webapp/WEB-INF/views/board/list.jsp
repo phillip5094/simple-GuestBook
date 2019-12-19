@@ -13,7 +13,7 @@
 	<hr>
 	<ul>
 		<c:forEach items="${list}" var="info">
-			<li><a href="/board/updateView?bno=${info.bno}"><c:out value="${info.content}"/></a></li>
+			<li><a href="/board/readView?bno=${info.bno}"><c:out value="${info.content}"/></a></li>
 		</c:forEach>
 	</ul>
 </body>

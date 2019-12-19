@@ -42,4 +42,13 @@ public class BoardController {
 		
 		return "board/list";
 	}
+	
+	@RequestMapping(value="/readView", method=RequestMethod.GET)
+	public String read(BoardVO boardVO, Model model) throws Exception{
+		logger.info("read");
+		
+		model.addAttribute("read", service.read(boardVO.getBno()));
+		
+		return "board/readView";
+	}
 }

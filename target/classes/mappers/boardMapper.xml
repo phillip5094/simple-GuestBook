@@ -13,4 +13,12 @@
 	<select id="list" resultType="kr.co.vo.BoardVO">
 		select bno, email, content from mp_board order by mod_date desc
 	</select>
+	
+	<!-- 방명록 상세정보 보기 -->
+	<select id="read" parameterType="int" resultType="kr.co.vo.BoardVO">
+		select bno, email, content, cre_date, mod_date
+		from mp_board
+		where bno = #{bno}
+	</select>
+	
 </mapper>
