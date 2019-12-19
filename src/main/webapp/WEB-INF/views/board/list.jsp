@@ -9,10 +9,11 @@
 </head>
 <body>
 	<h1>방명록 목록</h1>
+	<a href="/board/writeView">방명록 추가</a>
 	<hr>
 	<ul>
 		<c:forEach items="${list}" var="info">
-			<li><a href="/board/readView?bno=${info.bno}"><c:out value="${info.content}"/></a></li>
+			<li><a href="/board/updateView?bno=${info.bno}"><c:out value="${info.content}"/></a></li>
 		</c:forEach>
 	</ul>
 </body>
