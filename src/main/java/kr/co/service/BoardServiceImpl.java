@@ -36,7 +36,7 @@ public class BoardServiceImpl implements BoardService{
 	}
 
 	@Override
-	public List<BoardVO> checkPw(BoardVO boardVO) throws Exception {
+	public boolean checkPw(BoardVO boardVO) throws Exception {
 		return dao.checkPw(boardVO);
 	}
 

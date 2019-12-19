@@ -36,10 +36,17 @@ public class BoardDAOImpl implements BoardDAO{
 	}
 
 	@Override
-	public List<BoardVO> checkPw(BoardVO boardVO) throws Exception {
-		return sqlSession.selectList("boardMapper.checkPw", boardVO);
-		
+	public boolean checkPw(BoardVO boardVO) throws Exception {
+		List<BoardVO> result = sqlSession.selectList("boardMapper.checkPw", boardVO);
+		if(result.size() == 1) {
+			if(result.get(0).getPwd().equals(boardVO.getPwd())) {
+				return true;
+			}
+			return false;
+		}
+		else {
+			return false;
+		}
+
 	}
-	
-	
 }

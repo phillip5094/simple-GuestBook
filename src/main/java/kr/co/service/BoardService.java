@@ -13,5 +13,5 @@ public interface BoardService {
 	
 	public void update(BoardVO boardVO) throws Exception;
 	
-	public List<BoardVO> checkPw(BoardVO boardVO) throws Exception;
+	public boolean checkPw(BoardVO boardVO) throws Exception;
 }

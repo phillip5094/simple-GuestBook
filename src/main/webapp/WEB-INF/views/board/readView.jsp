@@ -12,9 +12,7 @@
 		$(".cancel_btn").on("click", function(){
 			event.preventDefault();
 			location.href = "/board/list";
-			
 		})
-		
 	})
 </script>
 <title>상세 방명록 정보</title>

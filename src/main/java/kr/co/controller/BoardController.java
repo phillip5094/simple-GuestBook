@@ -57,9 +57,20 @@ public class BoardController {
 		logger.info("request update");
 		logger.info("checkPw first");
 		
-		
-		service.update(boardVO);
-		
-		return "redirect:/board/list";
+		boolean result = service.checkPw(boardVO);
+		if(result == true) {
+			logger.info("pwd correct");
+			service.update(boardVO);
+			return "redirect:/board/list";
+		}
+		else {
+			logger.info("pwd incorrect");
+			return "redirect:/board/modifyFail";
+		}	
+	}
+	
+	@RequestMapping(value="/modifyFail", method=RequestMethod.GET)
+	public String modify() throws Exception{
+		return "board/modifyFail";
 	}
 }
