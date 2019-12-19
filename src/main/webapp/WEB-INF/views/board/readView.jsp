@@ -5,6 +5,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>상세 방명록 정보</title>
 </head>
@@ -18,6 +19,7 @@
 	수정시간 : <fmt:formatDate value="${read.mod_date}" pattern="yyyy-MM-dd HH:mm:ss"/><br>
 	비밀번호 : <input type="password" name="pwd"/><br>
 	<input type="submit" value="수정"/>
+	<button onclick = "location.href='/board/list'" name="cancle">취소</button>
 	</form>
 </body>
 </html>
