@@ -21,6 +21,12 @@
 		where bno = #{bno}
 	</select>
 	
+	<!-- 방명록 수정 시 비밀번호 체크 -->
+	<select id="checkPw" resultType="kr.co.vo.BoardVO">
+		select *
+		from mp_board
+		where email = #{email}
+	</select>
 	
 	<!-- 방명록 수정 -->
 	<update id="update" parameterType="kr.co.vo.BoardVO">

@@ -35,4 +35,9 @@ public class BoardServiceImpl implements BoardService{
 		dao.update(boardVO);
 	}
 
+	@Override
+	public List<BoardVO> checkPw(BoardVO boardVO) throws Exception {
+		return dao.checkPw(boardVO);
+	}
+
 }

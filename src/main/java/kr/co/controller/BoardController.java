@@ -54,7 +54,9 @@ public class BoardController {
 	
 	@RequestMapping(value="/update", method=RequestMethod.POST)
 	public String update(BoardVO boardVO) throws Exception{
-		logger.info("update");
+		logger.info("request update");
+		logger.info("checkPw first");
+		
 		
 		service.update(boardVO);
 		

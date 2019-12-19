@@ -12,4 +12,6 @@ public interface BoardDAO {
 	public BoardVO read(int bno) throws Exception;
 	
 	public void update(BoardVO boardVO) throws Exception;
+	
+	public List<BoardVO> checkPw(BoardVO boardVO) throws Exception;
 }
