@@ -12,9 +12,12 @@
 	<h1>상세 방명록 정보</h1>
 	<a href="/board/list">방명록 목록</a>
 	<hr>
-	이메일 : <c:out value="${read.email}" /><br>
-	본문 : <c:out value="${read.content}" /><br>
+	<form action="/board/update" method="post">
+	이메일 : <input type="text" name="email" value="${read.email}" readonly/><br>
+	본문 : <textarea id="content" name="content" >${read.content}</textarea><br>
 	수정시간 : <fmt:formatDate value="${read.mod_date}" pattern="yyyy-MM-dd HH:mm:ss"/><br>
-	
+	비밀번호 : <input type="password" name="pwd"/><br>
+	<input type="submit" value="수정"/>
+	</form>
 </body>
 </html>

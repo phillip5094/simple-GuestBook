@@ -21,4 +21,10 @@
 		where bno = #{bno}
 	</select>
 	
+	
+	<!-- 방명록 수정 -->
+	<update id="update" parameterType="kr.co.vo.BoardVO">
+		update mp_board set content = #{content}, mod_date = now()
+		where email= #{email}
+	</update>
 </mapper>

@@ -51,4 +51,13 @@ public class BoardController {
 		
 		return "board/readView";
 	}
+	
+	@RequestMapping(value="/update", method=RequestMethod.POST)
+	public String update(BoardVO boardVO) throws Exception{
+		logger.info("update");
+		
+		service.update(boardVO);
+		
+		return "redirect:/board/list";
+	}
 }

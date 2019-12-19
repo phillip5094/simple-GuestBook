@@ -29,6 +29,11 @@ public class BoardDAOImpl implements BoardDAO{
 	public BoardVO read(int bno) throws Exception {
 		return sqlSession.selectOne("boardMapper.read", bno);
 	}
+
+	@Override
+	public void update(BoardVO boardVO) throws Exception {
+		sqlSession.update("boardMapper.update", boardVO);
+	}
 	
 	
 }
