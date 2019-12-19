@@ -33,4 +33,12 @@
 		update mp_board set content = #{content}, mod_date = now()
 		where email= #{email}
 	</update>
+	
+	<!-- 방명록 삭제 -->
+	<delete id="delete" parameterType="int">
+		delete
+		from mp_board
+		where bno = #{bno}
+	</delete>
+	
 </mapper>

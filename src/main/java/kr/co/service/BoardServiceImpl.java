@@ -40,4 +40,10 @@ public class BoardServiceImpl implements BoardService{
 		return dao.checkPw(boardVO);
 	}
 
+	@Override
+	public void delete(int bno) throws Exception {
+		dao.delete(bno);
+		
+	}
+
 }

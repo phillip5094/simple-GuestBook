@@ -14,4 +14,6 @@ public interface BoardDAO {
 	public void update(BoardVO boardVO) throws Exception;
 	
 	public boolean checkPw(BoardVO boardVO) throws Exception;
+	
+	public void delete(int bno) throws Exception;
 }
