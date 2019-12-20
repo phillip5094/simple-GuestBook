@@ -1,5 +1,8 @@
 package kr.co.controller;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import javax.inject.Inject;
 
 import org.slf4j.Logger;
@@ -27,11 +30,24 @@ public class BoardController {
 	
 	@RequestMapping(value="/board/write", method=RequestMethod.POST)
 	public String write(BoardVO boardVO) throws Exception{
+		boolean isValid = false;
 		logger.info("write");
 		
+		/* email 유효성 검사 */
 		service.write(boardVO);
+		String email = boardVO.getEmail();
+		String regex = "^[_a-z0-9-]+(.[_a-z0-9-]+)*@(?:\\w+\\.)+\\w+$"; 
+		Pattern p = Pattern.compile(regex);
+		Matcher m = p.matcher(email);
+		if(m.matches()) {
+			isValid = true;
+		}
 		
-		return "redirect:/board/list";
+		if(isValid) {
+			return "redirect:/board/list";
+		} else {
+			return "redirect:/board/writeFail";
+		}
 	}
 	
 	@RequestMapping(value="/list", method=RequestMethod.GET)
@@ -65,7 +81,7 @@ public class BoardController {
 		}
 		else {
 			logger.info("pwd incorrect");
-			return "redirect:/board/modifyFail";
+			return "redirect:/board/updateFail";
 		}	
 	}
 	
@@ -81,13 +97,18 @@ public class BoardController {
 		}
 		else {
 			logger.info("pwd incorrect");
-			return "redirect:/board/modifyFail";
+			return "redirect:/board/updateFail";
 		}
 	}
 	
 	
-	@RequestMapping(value="/modifyFail", method=RequestMethod.GET)
-	public String modify() throws Exception{
-		return "board/modifyFail";
+	@RequestMapping(value="/updateFail", method=RequestMethod.GET)
+	public String updateFail() throws Exception{
+		return "board/updateFail";
+	}
+	
+	@RequestMapping(value="/writeFail", method=RequestMethod.GET)
+	public String writeFail() throws Exception{
+		return "board/writeFail";
 	}
 }
