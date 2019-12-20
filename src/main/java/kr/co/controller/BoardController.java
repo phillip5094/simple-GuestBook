@@ -34,7 +34,6 @@ public class BoardController {
 		logger.info("write");
 		
 		/* email 유효성 검사 */
-		service.write(boardVO);
 		String email = boardVO.getEmail();
 		String regex = "^[_a-z0-9-]+(.[_a-z0-9-]+)*@(?:\\w+\\.)+\\w+$"; 
 		Pattern p = Pattern.compile(regex);
@@ -44,8 +43,11 @@ public class BoardController {
 		}
 		
 		if(isValid) {
+			logger.info("write success");
+			service.write(boardVO);
 			return "redirect:/board/list";
 		} else {
+			logger.info("write fail");
 			return "redirect:/board/writeFail";
 		}
 	}
