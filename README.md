@@ -1,5 +1,7 @@
 # simple-GuestBook
 
+[![Build Status](https://travis-ci.com/phillip5094/simple-GuestBook.svg?branch=master)](https://travis-ci.com/phillip5094/simple-GuestBook)
+
 ### 0.개발환경
 - 자바 8+
 - SpringMVC
