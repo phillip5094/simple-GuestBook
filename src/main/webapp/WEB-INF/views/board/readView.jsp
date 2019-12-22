@@ -90,8 +90,8 @@ body {
 				<input class="form-control input-lg" id="pwd" name="pwd" type="password">
 			</div>
 			<input class="btn btn-primary" type="submit" value="수정" />
-			<button class="btn btn-warning" type="submit" class="delete_btn" name="delete">삭제</button>
-			<button class="btn btn-success" type="submit" class="cancel_btn" name="cancle">취소</button>
+			<button class="btn btn-warning delete_btn" type="submit" name="delete">삭제</button>
+			<button class="btn btn-success cancel_btn" type="submit" name="cancle">취소</button>
 			
 			
 			
