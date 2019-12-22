@@ -20,6 +20,7 @@ body {
 	padding-right: 70px;
 	padding-bottom: 30px;
 }
+
 </style>
 
 <title>방명록 목록</title>

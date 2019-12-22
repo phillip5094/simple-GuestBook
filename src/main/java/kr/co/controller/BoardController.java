@@ -1,5 +1,6 @@
 package kr.co.controller;
 
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -56,7 +57,11 @@ public class BoardController {
 	public String list(Model model) throws Exception{
 		logger.info("list");
 		
-		model.addAttribute("list", service.list());
+		List<BoardVO> lists = service.list();
+		for(BoardVO tmp : lists) {
+			tmp.setContent(tmp.getContent().replaceAll("\n", "<br>"));
+		}
+		model.addAttribute("list", lists);
 		
 		return "board/list";
 	}
