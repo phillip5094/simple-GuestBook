@@ -11,7 +11,7 @@
 	
 	<!-- 방명록 가져오기 -->
 	<select id="list" resultType="kr.co.vo.BoardVO">
-		select bno, email, content from mp_board order by mod_date desc
+		select bno, email, content, mod_date from mp_board order by mod_date desc
 	</select>
 	
 	<!-- 방명록 상세정보 보기 -->
