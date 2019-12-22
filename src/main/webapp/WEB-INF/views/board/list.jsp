@@ -20,7 +20,6 @@ body {
 	padding-right: 70px;
 	padding-bottom: 30px;
 }
-
 </style>
 
 <title>방명록 목록</title>
@@ -44,7 +43,7 @@ body {
 					<td>${info.bno}</td>
 					<td>${info.content}</td>
 					<td>${info.email}</td>
-					<td><fmt:formatDate value="${info.mod_date}" pattern="yyyy-MM-dd hh:mm:ss"/></td>
+					<td><fmt:formatDate value="${info.mod_date}" pattern="yyyy-MM-dd HH:mm:ss"/></td>
 				</tr>
 				</c:forEach>
 
