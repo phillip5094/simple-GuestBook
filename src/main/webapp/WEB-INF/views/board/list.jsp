@@ -12,6 +12,16 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<style>
+body {
+	padding-top: 70px;
+	padding-left: 70px;
+	padding-right: 70px;
+	padding-bottom: 30px;
+}
+</style>
+
 <title>방명록 목록</title>
 </head>
 <body>
