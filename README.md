@@ -18,3 +18,8 @@
 - 수정 시 별도 데이블 컬럼에 수정 시각 기록
 - 이메일이 올바른지 서버 쪽, 클라이언트 쪽 모두에서 체크
 - Travis CI와 연동
+
+### 2. 동작화면
+<img src="https://user-images.githubusercontent.com/58776221/71337070-42d39380-258d-11ea-9a8e-24684d6b1f74.JPG" width="70%"></img>
+<img src="https://user-images.githubusercontent.com/58776221/71368610-c02df100-25eb-11ea-9332-f1cf85deb272.JPG" width="70%"></img>
+<img src="https://user-images.githubusercontent.com/58776221/71368657-d63bb180-25eb-11ea-97e4-db5f2a9eede2.JPG" width="70%"></img>
