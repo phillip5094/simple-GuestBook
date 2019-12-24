@@ -108,6 +108,10 @@ public class BoardController {
 		}
 	}
 	
+	@RequestMapping(value="/deleteAll", method=RequestMethod.GET)
+	public void deleteAll() throws Exception{
+		logger.info("deleteAll");
+	}
 	
 	@RequestMapping(value="/updateFail", method=RequestMethod.GET)
 	public String updateFail() throws Exception{

@@ -41,4 +41,10 @@
 		where bno = #{bno}
 	</delete>
 	
+	
+	<!-- junit을 위해 테이블 초기화 -->
+	<delete id="deleteAll">
+		delete
+		from mp_board
+	</delete>
 </mapper>

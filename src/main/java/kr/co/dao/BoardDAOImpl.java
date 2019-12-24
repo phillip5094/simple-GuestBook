@@ -54,4 +54,10 @@ public class BoardDAOImpl implements BoardDAO{
 	public void delete(int bno) throws Exception {
 		sqlSession.delete("boardMapper.delete", bno);
 	}
+
+	@Override
+	public void deleteAll() throws Exception {
+		sqlSession.delete("boardMapper.deleteAll");
+		
+	}
 }

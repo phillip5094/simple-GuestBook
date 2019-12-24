@@ -16,4 +16,6 @@ public interface BoardService {
 	public boolean checkPw(BoardVO boardVO) throws Exception;
 	
 	public void delete(int bno) throws Exception;
+	
+	public void deleteAll() throws Exception;
 }
