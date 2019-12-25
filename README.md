@@ -18,6 +18,7 @@
 - 수정 시 별도 데이블 컬럼에 수정 시각 기록
 - 이메일이 올바른지 서버 쪽, 클라이언트 쪽 모두에서 체크
 - Travis CI와 연동
+- 각 항목에 대해 최소 1개의 Junit TestCase 작성
 
 ### 2. 동작화면
 <img src="https://user-images.githubusercontent.com/58776221/71337070-42d39380-258d-11ea-9a8e-24684d6b1f74.JPG" width="70%"></img>
